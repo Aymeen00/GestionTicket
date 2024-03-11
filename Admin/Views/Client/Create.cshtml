@@ -1,0 +1,13 @@
+﻿@model Models.Client.ClientViewModel
+
+<h2>Créer un nouveau client</h2>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="NomClient" class="control-label"></label>
+        <input asp-for="NomClient" class="form-control" />
+        <span asp-validation-for="NomClient" class="text-danger"></span>
+    </div>
+    <!-- Ajoutez d'autres champs du formulaire ici -->
+    <button type="submit" class="btn btn-primary">Créer</button>
+</form>

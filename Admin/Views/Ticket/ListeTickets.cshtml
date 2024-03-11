@@ -1,0 +1,31 @@
+﻿@model List<Models.Ticket.TicketViewModel>
+
+<h1>Liste des tickets</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>IdTicket</th>
+            <th>Date de création</th>
+            <th>Heure de création</th>
+            <th>Commentaire</th>
+            <th>IdClient</th>
+            <th>Priorité</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ticket in Model)
+        {
+            <tr>
+                <td>@ticket.IdTicket</td>
+                <td>@ticket.DateCreation</td>
+                <td>@ticket.HeureCreation</td>
+                <td>@ticket.Commentaire</td>
+                <td>@ticket.IdClient</td>
+                <td>@ticket.Priorite</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-controller="Ticket" asp-action="Creer" class="btn btn-primary">Créer un ticket</a>

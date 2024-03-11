@@ -1,0 +1,13 @@
+﻿@model Models.Auth.AgentLoginViewModel
+
+<form asp-controller="AgentAuth" asp-action="Login" method="post">
+    <div>
+        <label for="Compte">Compte :</label>
+        <input type="text" id="Compte" name="Compte" asp-for="Compte" required />
+    </div>
+    <div>
+        <label for="MotPasse">Mot de passe :</label>
+        <input type="password" id="MotPasse" name="MotPasse" asp-for="MotPasse" required />
+    </div>
+    <button type="submit">Se connecter</button>
+</form>

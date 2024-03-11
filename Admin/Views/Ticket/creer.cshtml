@@ -1,0 +1,15 @@
+﻿@model Models.Ticket.TicketViewModel
+
+<h1>Créer un nouveau ticket</h1>
+
+<form asp-controller="Ticket" asp-action="Creer" method="post">
+    <div>
+        <label for="Commentaire">Commentaire :</label>
+        <input type="text" id="Commentaire" name="Commentaire" asp-for="Commentaire" required />
+    </div>
+    <div>
+        <label for="Priorite">Priorité :</label>
+        <input type="text" id="Priorite" name="Priorite" asp-for="Priorite" required />
+    </div>
+    <button type="submit">Créer</button>
+</form>
